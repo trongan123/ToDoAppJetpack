@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/jetpack_nav"
+    app:startDestination="@id/mainFragment2">
+
+    <fragment
+        android:id="@+id/mainFragment2"
+        android:name="com.example.todoappjetpack.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment2_to_addItemKTFragment"
+            app:destination="@id/addItemKTFragment" />
+        <action
+            android:id="@+id/action_mainFragment2_to_updateItemJFragment"
+            app:destination="@id/updateItemJFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemKTFragment"
+        android:name="com.example.todoappjetpack.AddItemKTFragment"
+        android:label="AddItemKTFragment" >
+        <action
+            android:id="@+id/action_addItemKTFragment_to_mainFragment2"
+            app:destination="@id/mainFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateItemJFragment"
+        android:name="com.example.todoappjetpack.UpdateItemJFragment"
+        android:label="UpdateItemJFragment" >
+        <action
+            android:id="@+id/action_updateItemJFragment_to_mainFragment2"
+            app:destination="@id/mainFragment2" />
+    </fragment>
+</navigation>
